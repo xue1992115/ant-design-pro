@@ -89,6 +89,7 @@ class BasicLayout extends React.PureComponent {
     dispatch({
       type: 'setting/getSetting',
     });
+    // 获取菜单数据
     dispatch({
       type: 'menu/getMenuData',
       payload: { routes, authority },
@@ -147,7 +148,6 @@ class BasicLayout extends React.PureComponent {
       id: currRouterData.locale || currRouterData.name,
       defaultMessage: currRouterData.name,
     });
-
     return `${pageName} - Ant Design Pro`;
   };
 // 获取布局样式
@@ -161,8 +161,8 @@ class BasicLayout extends React.PureComponent {
     }
     return null;
   };
-  // 处理菜单折叠
 
+  // 处理菜单折叠
   handleMenuCollapse = collapsed => {
     const { dispatch } = this.props;
     dispatch({
@@ -177,6 +177,7 @@ class BasicLayout extends React.PureComponent {
     if (process.env.NODE_ENV === 'production' && APP_TYPE !== 'site') {
       return null;
     }
+    
     return <SettingDrawer />;
   };
 
@@ -195,6 +196,7 @@ class BasicLayout extends React.PureComponent {
     const isTop = PropsLayout === 'topmenu';
     const routerConfig = this.getRouterAuthority(pathname, routes);
     const contentStyle = !fixedHeader ? { paddingTop: 0 } : {};
+    // 侧边导航
     const layout = (
       <Layout>
         {!isTop && isMobile  ? null : (
@@ -279,3 +281,6 @@ Consumer一个可以订阅 context 变化的 React 组件。
 （1）connect是容器组件，是在原始的组件外包装一层State，将state映射到props上，connect接受一个函数，返回一个函数
 （2）@connect只是connection的装饰器和语法糖，export的不再是connect,而是组件本身，@connect必须放在export default class前面
 */
+
+
+// 总结，basicLayout主要是侧边栏，头部，内容，底部内容

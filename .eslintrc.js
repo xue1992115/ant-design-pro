@@ -9,6 +9,7 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
+  // 对全局变量不进行检测
   globals: {
     APP_TYPE: true,
     page: true,

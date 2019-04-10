@@ -1,4 +1,4 @@
-@import '~antd/lib/style/themes/default.less';
+@import '~antd/lib/style/themes/default.less'; // 这种方法是webpack的目录解析，～表示的解析的是主目录
 
 .container {
   display: flex;
@@ -13,7 +13,7 @@
   width: 100%;
   height: 40px;
   line-height: 44px;
-  :global(.ant-dropdown-trigger) {
+  :global(.ant-dropdown-trigger) { // 修改antd中的默认的样式
     margin-right: 24px;
   }
 }
@@ -23,6 +23,7 @@
   flex: 1;
 }
 
+// 根据屏幕自适应样式
 @media (min-width: @screen-md-min) {
   .container {
     background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
@@ -43,7 +44,7 @@
 .header {
   height: 44px;
   line-height: 44px;
-  a {
+  a {  // a标签在项目中实际对应的是link标签
     text-decoration: none;
   }
 }

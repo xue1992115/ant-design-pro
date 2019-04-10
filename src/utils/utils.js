@@ -105,6 +105,7 @@ function getRenderArr(routes) {
 }
 
 /**
+ * 获取路由数据配置
  * Get router routing configuration
  * { path:{name,...param}}=>Array<{name,path ...param}>
  * @param {string} path

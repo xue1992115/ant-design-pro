@@ -38,7 +38,7 @@ export default class BaseMenu extends PureComponent {
       .filter(item => item);
   };
 
-  // 获取当前选择的菜单
+  // 获取当前选择的菜单的key
   getSelectedMenuKeys = pathname => {
     const { flatMenuKeys } = this.props;
     return urlToList(pathname).map(itemPath => getMenuMatches(flatMenuKeys, itemPath).pop());

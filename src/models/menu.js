@@ -4,7 +4,7 @@ import { formatMessage } from 'umi/locale';
 import Authorized from '@/utils/Authorized';
 
 const { check } = Authorized;
-
+// 主要是获取menu数据配置
 // Conversion router to menu.
 function formatter(data, parentAuthority, parentName) {
   return data
@@ -40,7 +40,7 @@ function formatter(data, parentAuthority, parentName) {
 const memoizeOneFormatter = memoizeOne(formatter, isEqual);
 
 /**
- * get SubMenu or Item
+ * get SubMenu or Item 获取菜单配置数据
  */
 const getSubMenu = item => {
   // doc: add hideChildrenInMenu

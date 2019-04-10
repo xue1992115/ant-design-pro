@@ -1,3 +1,4 @@
+// 路由配置文件，包含user和 basic两部分的组件，设置整个项目的路由以及对应的components组件
 export default [
   // user
   {

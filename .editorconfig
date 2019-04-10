@@ -1,8 +1,8 @@
-# http://editorconfig.org
+# http://editorconfig.org # 编辑器配置，统一代码格式
 root = true
 
-[*]
-indent_style = space
+[*] # 对所有文件有效
+indent_style = space # 缩进类型
 indent_size = 2
 end_of_line = lf
 charset = utf-8
@@ -14,3 +14,5 @@ trim_trailing_whitespace = false
 
 [Makefile]
 indent_style = tab
+
+

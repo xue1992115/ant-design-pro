@@ -1,3 +1,4 @@
+// 获取用户的权限记录
 // use localStorage to store the authority info, which might be sent from server in actual project.
 export function getAuthority(str) {
   // return localStorage.getItem('antd-pro-authority') || ['admin', 'user'];
@@ -15,7 +16,7 @@ export function getAuthority(str) {
   }
   return authority || ['admin'];
 }
-
+// 存储信息在localStorage
 export function setAuthority(authority) {
   const proAuthority = typeof authority === 'string' ? [authority] : authority;
   return localStorage.setItem('antd-pro-authority', JSON.stringify(proAuthority));
